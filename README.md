@@ -1,6 +1,17 @@
 # Windows Broadband Toggle (.bat)
 
-A lightweight Windows batch script that **automatically connects or disconnects** your broadband connection with a single double-click.
+A lightweight Windows batch script that **automatically connects or disconnects** your broadband connection with a single double-click.  
+This script uses the built‑in **rasdial** command to automate internet toggling on **Windows 10/11**.  
+If you’ve ever searched for *“Windows broadband auto connect script”*, *“rasdial broadband toggle batch file”*, or *“automate internet connect disconnect Windows”* — this project solves exactly that.
+
+---
+
+## ✨ Features
+- ✅ One‑click connect/disconnect  
+- ✅ Works on Windows 10 & 11  
+- ✅ Lightweight, no installation needed  
+- ✅ Uses built‑in `rasdial` (no extra software)  
+- ✅ Customizable with your ISP username & password  
 
 ---
 
@@ -15,7 +26,10 @@ The script checks whether the connection named **"Broadband Connection"** is act
 1. Edit the file `Broadband-Toggle.bat` by opening in on notepad .
 
 2. Replace:
-YourIspID YourIspIDpassword
+
+"rasdial "Broadband Connection" YourIspID YourIspIDpassword"  change here in notepad .
+
+Replace "YourIspID" & "YourIspIDpassword" 
 with your real broadband username and password.
 3. Right-click → **Run as Administrator** (required for `rasdial`).
 4. Double-click any time to toggle the connection.
