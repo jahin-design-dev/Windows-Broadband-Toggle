@@ -1,0 +1,585 @@
+html {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+body {
+    background: #fff8f0;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 24px;
+    color: #55206d;
+    margin: 0 ;
+    padding: 0 ;
+    
+}
+
+h1 {
+    font-family: "League Spartan" , sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 50px;
+    color: #190D37;
+    margin-top: 10px ;
+    margin-bottom: 20px ;
+    position: relative;
+}
+
+h2 {
+    font-family: "League Spartan" , sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #000000;
+}
+
+.bigtext {
+    color: #331e6a;
+    font-family: "Poppins" , sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+#hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;         /* space between image & text */
+  flex-wrap: nowrap; /* don't let text drop below image */
+}
+#hero-text {
+    width: 60%;
+    padding: 32px 20px 32px 20px ;
+}
+
+/*#hero-image-width {
+    width: 40% ;
+}*/
+
+#hero-image {
+    /*width: 100%;*/
+    border-bottom-right-radius: 400px ;
+    border-top-left-radius: 200px ;
+    object-fit: cover;
+    max-width: max-content ;
+    /*position: absolute;*/
+}
+
+#fix { 
+    /*max-width: fit-content;*/
+    object-fit: cover;
+    max-width: max-content ;
+
+}
+
+
+.smalltext {
+    color: #000000;
+    font-family: "Inter" , sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+#hi-and-name {
+    margin-top: 20px ;
+}
+
+#contact-button {
+    height: 44px;
+    width: 138px;
+    border-radius: 4px;
+    background-color:  #000000;
+    font-family: "Inter" , sans-serif;
+    font-size: 16px;
+    font-weight: 500 ;
+    line-height: 19px;
+    color: #ffffff;
+    margin-top: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px ;
+    border-top-left-radius: 50px ;
+}
+
+#contact-button:hover {
+    background-color: #030d94c9;
+    color: #ffffff;
+    cursor: pointer;
+    border-top-right-radius: 50px ;
+    border-bottom-right-radius: 50px ;
+    border-top-left-radius: 50px ;
+    
+    
+}
+
+#pricing-section {
+    max-width: 1060px ;
+    margin: 48px auto ;
+}
+
+.overtitle {
+    font-family: "poppins" , sans-serif;
+    font-size: 12px ;
+    font-weight: 600;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #2858ff;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto ;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin: 8px auto 48px auto ;
+    max-width: 700px;
+
+}
+
+#pricing-boxes {
+    display: flex;
+    text-align: center;
+
+}
+
+.pricing-box {
+    width: 33.33% ;
+    background-color: #ffffff;
+    
+}
+
+.pricing-card {
+    background-color: #084f00;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 6px 2px 25px -9px #0000001A;
+    padding: 20px ;
+}
+
+.pricing-card-2 {
+    background-color:#ffffff;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 6px 2px 25px -5px #000000;
+    padding: 20px ;
+}
+
+.pricing-card-3 {
+    background-color:#000000;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 6px 2px 25px -5px #0000001A;
+    padding: 20px ;
+}
+
+.card-3 {
+    background-color:#000000;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 6px 2px 25px -5px #000000;
+    padding: 20px ;
+}
+.service {
+font-family: "Poppins" , sans-serif;
+font-size: 14px;
+font-weight: 500;
+line-height: 21px ;
+text-transform: uppercase;
+color: #ffffff;
+}
+.service1 {
+font-family: "Poppins" , sans-serif;
+font-size: 14px;
+font-weight: 500;
+line-height: 21px ;
+text-transform: uppercase;
+color: #000000;
+}
+
+.price {
+    font-family: "Poppins" , sans-serif;
+    font-size: 36px;
+    font-weight: 700px ;
+    line-height: 54px ;
+    color: #ffffff;
+    margin-top: 8px;
+}
+
+.price-1 {
+    font-family: "Poppins" , sans-serif;
+    font-size: 36px;
+    font-weight: 700px ;
+    line-height: 54px ;
+    color: #000000;
+    margin-top: 8px;
+}
+
+.price-per-page {
+    font-family: "Poppins" , sans-serif;
+    font-size: 14px;
+    font-weight: 400 ;
+    line-height: 21px ;
+    color: #ffffff;
+}
+
+.price-per-page-1 {
+    font-family: "Poppins" , sans-serif;
+    font-size: 14px;
+    font-weight: 400 ;
+    line-height: 21px ;
+    color: #000000;
+}
+
+.service-description {
+    font-family: "Poppins" , sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #ffffff;
+    margin-top: 8px;
+}
+
+.service-description-1 {
+    font-family: "Poppins" , sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #000000;
+    margin-top: 8px;
+}
+
+.service-benefits {
+    padding: 0;
+    list-style-type: none ;
+    margin: 0 0 0 -10px;
+    border: 0;
+text-align: left;
+   
+}
+
+.service-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+color:#ffffff;
+}
+.service-benefits img {
+  height: 24px;
+  width: auto;
+  flex-shrink: 0;
+}
+.service-benefits-2 img {
+    height: 24px ;
+    margin: -7px 0 -7px 0;
+    padding : 0;
+    border: 0;
+}
+
+.service-benefits-3 img {
+    height: 24px ;
+    margin: -7px 0 -7px 0;
+    padding : 0;
+    border: 0;
+}
+
+.graphicspakages {
+    color: #000000;
+    text-align: center;
+    font-family: "League Spartan";
+    padding-top: 10px;
+}
+
+.webpakages {
+    color: #000000;
+    text-align: center;
+    font-family: "League Spartan";
+}
+
+.service-benefits-2 li {
+    margin-bottom: 8px;
+ font-family: "Poppins" , sans-serif;
+ font-size: 16px;
+ font-weight: 400 ;
+ line-height: 24px;
+ color: #ffffff;
+  ;
+}
+.service-benefits-2 {
+    padding: 0 ;
+    list-style-type: none
+}
+
+.service-benefits-3 {
+    padding: 0 ;
+    list-style-type: none
+}
+
+.service-benefits-3 li {
+    margin-bottom: 8px;
+ font-family: "Poppins" , sans-serif;
+ font-size: 16px;
+ font-weight: 400 ;
+ line-height: 24px;
+ color: #000000;
+}
+
+.service-contact-button {
+    width: 100%;
+    height: 44px;
+    border-radius: 4px;
+    border: 2px solid #2F2F2F ;
+    background-color: #ffffff ;
+    color: #2F2F2F ;
+    font-family: "Inter" , sans-serif ;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.service-contact-button:hover {
+    background-color: #2F2F2F ;
+    color: #ffffff ; 
+    cursor: pointer;
+}
+
+.card-2 {
+    background-color: #d10606;
+}
+
+.card-3 {
+    background-color: #d10606;
+}
+
+.card-2 .service {
+    color: #000000 ;
+}
+
+.card-2 li {
+    color: #000000BF;
+}
+
+.card-2 .service-description {
+    color: #00000080; 
+}
+
+.card-2 .price-per-page {
+    color: #00000080;
+}
+
+.card-2 .service-contact-button {
+    background-color: #2F2F2F;
+    color: #ffffff ;
+}
+
+.card-2 .service-contact-button:hover {
+    background-color: #ffffff ;
+    color: #2F2F2F ;
+}
+
+#footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    margin-top: 48px;
+    color: #ffffff;
+    font-family: "Poppins" , sans-serif;
+    font-size: 12px;
+    font-weight: 500 ;
+    line-height: 18px ;
+}
+
+#yellowline {
+    /*max-height: 100%;*/
+    height: 250px;
+    width: 250px;
+    /*margin-top: -400px; */
+    margin-bottom: -40px;
+    /*padding-bottom: 0 ;
+    border-bottom: 0 ;*/
+    z-index: -10 ;
+    position: absolute;
+}
+
+/*#purball {
+    margin-bottom: -40px;
+    z-index: -10 ;
+    position: absolute;
+    width: 40%
+}
+
+.displayflex {
+    display: flex;
+}*/
+
+.heroimage  {
+    position: relative;
+}
+
+.purball  {
+    position: absolute;
+   /* padding: -200px;
+    margin-bottom: -500px;
+    border: 0;
+    z-index: -10 ;*/
+    
+   /* padding-bottom: -200px;*/
+    margin-bottom: -10000px;
+    padding-top: -500px;
+    z-index: -10 ;
+    
+    
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px; /* space between buttons */
+    margin-top: 20px;
+    flex-wrap: wrap; /* wraps on small screens */
+}
+
+.social-button {
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 50px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-button:hover {
+    background-color: #ffcc00; /* highlight color on hover */
+    color: #000;
+}
+
+
+.slider-wrapper {
+    width: 100%;
+    margin-top: 40px; /* space from buttons */
+}
+
+.slider-container {
+    position: relative;
+    max-width: 1060px; /* same as your page container */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    padding-bottom: 10px; /* give space for shadow if needed */
+}
+
+.slide-box {
+    flex: 0 0 300px; /* width of each box */
+    min-width: 300px;
+    height: 180px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.slide-box h2 {
+    font-family: "League Spartan", sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+.slide-box img {
+    max-height: 100%;
+    max-width: 100px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.slide-btn.prev {
+    left: 0;
+}
+
+.slide-btn.next {
+    right: 0;
+}
+
+/* Optional: hide scrollbar */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .slide-box {
+        flex: 0 0 250px;
+        min-width: 250px;
+        height: 160px;
+    }
+}
+
+#hero-section {
+    display: flex;
+    flex-wrap: wrap; /* allows next sections to drop below */
+}
+
+.slider-wrapper {
+  width: 100%;
+  display: block;
+  clear: both;
+  margin-top: 60px;  /* nice space below hero section */
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 60px 8%;
+  gap: 60px;
+}
+
+.hero img {
+  width: 280px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.hero-content {
+  flex: 1 1 450px;
+  max-width: 550px;
+}
+
+
