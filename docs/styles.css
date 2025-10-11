@@ -270,6 +270,7 @@ text-align: left;
   gap: 8px;
   white-space: nowrap;
 color:#ffffff;
+
 }
 .service-benefits img {
   height: 24px;
@@ -310,6 +311,7 @@ color:#ffffff;
  font-weight: 400 ;
  line-height: 24px;
  color: #ffffff;
+text-align: left;
   ;
 }
 .service-benefits-2 {
@@ -329,6 +331,7 @@ color:#ffffff;
  font-weight: 400 ;
  line-height: 24px;
  color: #000000;
+text-align: left;
 }
 
 .service-contact-button {
@@ -581,5 +584,116 @@ color:#ffffff;
   flex: 1 1 450px;
   max-width: 550px;
 }
+
+
+/* ==== Behance Projects Section ==== */
+.projects-section {
+  max-width: 1060px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.projects-title {
+  font-family: "League Spartan", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.behance-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.behance-slider iframe {
+  flex: 0 0 404px;
+  height: 316px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slide-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  z-index: 10;
+}
+
+.slide-btn.prev {
+  left: -50px;
+}
+
+.slide-btn.next {
+  right: -50px;
+}
+
+.slide-btn:hover {
+  background: #444;
+}
+
+.behance-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.behance-btn.prev { left: -50px; }
+.behance-btn.next { right: -50px; }
+
+.behance-btn:hover {
+  background: #444;
+}
+
+/* Main slider arrows */
+.slider-wrapper:not(.behance-wrapper) .slide-btn.prev {
+    left: 10px; /* inside the slider */
+}
+
+.slider-wrapper:not(.behance-wrapper) .slide-btn.next {
+    right: 10px; /* inside the slider */
+}
+
+.slider-wrapper .slide-btn {
+    z-index: 100;
+}
+
+.slider-container {
+    padding: 0 40px; /* leaves space for arrows */
+}
+.slider-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333; /* change color if needed */
+    font-family: "League Spartan", sans-serif;
+
+}
+
+
 
 
