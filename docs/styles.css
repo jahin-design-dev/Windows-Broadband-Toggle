@@ -704,3 +704,31 @@ text-align: left;
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  #hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  #hero-text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  #hero-image {
+    max-width: 280px;
+    height: auto;
+  }
+}
+
