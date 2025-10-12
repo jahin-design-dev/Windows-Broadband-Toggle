@@ -37,7 +37,7 @@
             <div class="smalltext">
                 <a href="tel:+8801748157221" >call(📱) +880 1748157221</a>
                 <div style="float: right;">
-  <a href="#" id="smart-contact-link">✉ jahinbinamin@gmail.com</a>
+  <a href="#" id="smart-contact-link" class="smalltext">✉ jahinbinamin@gmail.com</a>
 </div>
 
 
@@ -560,20 +560,31 @@ document.querySelectorAll('.behance-slider').forEach(slider => {
 
 </script>
 <script>
-  const link = document.getElementById('smart-contact-link');
+  (function() {
+    const link = document.getElementById('smart-contact-link');
 
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    // Mail content (URL-encoded)
+    const subject = encodeURIComponent('Design Project Inquiry');
+    const body = encodeURIComponent(
+      "Hi Jahin,\n\nI found you through your website and would like to discuss a design project.\n\nRegards,\n[Your Name]"
+    );
 
-  if(isMobile){
-    // Mobile users → WhatsApp
-    link.href = "https://wa.me/8801748157221?text=Hi%20Jahin,%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20discuss%20a%20design%20project.";
-  } else {
-    // Desktop users → Gmail web
-    link.href = "https://mail.google.com/mail/?view=cm&fs=1&to=jahinbinamin@gmail.com&su=Design%20Project%20Inquiry&body=Hi%20Jahin,%0A%0AI%20found%20you%20through%20your%20website%20and%20would%20like%20to%20discuss%20a%20design%20project.%0A%0ARegards,%0A[Your%20Name]";
-    link.target = "_blank";
-  }
+    // Detect mobile (basic)
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // Mobile: open default mail app
+      link.href = `mailto:jahinbinamin@gmail.com?subject=${subject}&body=${body}`;
+      // avoid target so it opens the mail app
+      link.removeAttribute('target');
+    } else {
+      // Desktop: open Gmail web compose in new tab (fallback for desktop users)
+      link.href = `https://mail.google.com/mail/?view=cm&fs=1&to=jahinbinamin@gmail.com&su=${subject}&body=${body}`;
+      link.target = "_blank";
+      link.rel = "noopener";
+    }
+  })();
 </script>
-
 
 
 </body>
