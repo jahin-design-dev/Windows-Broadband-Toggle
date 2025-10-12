@@ -559,31 +559,37 @@ document.querySelectorAll('.behance-slider').forEach(slider => {
 });
 
 </script>
+
 <script>
-  (function() {
-    const link = document.getElementById('smart-contact-link');
+(function() {
+  const link = document.getElementById('smart-contact-link');
 
-    // Mail content (URL-encoded)
-    const subject = encodeURIComponent('Design Project Inquiry');
-    const body = encodeURIComponent(
-      "Hi Jahin,\n\nI found you through your website and would like to discuss a design project.\n\nRegards,\n[Your Name]"
+  if (!link) return; // safety check
+
+  const subject = encodeURIComponent('Design Project Inquiry');
+  const body = encodeURIComponent(
+    "Hi Jahin,\n\nI found you through your website and would like to discuss a design project.\n\nRegards,\n[Your Name]"
+  );
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  // Clear any previous href first to avoid cached scripts
+  link.removeAttribute('href');
+
+  if (isMobile) {
+    // Opens default mail app on phones
+    link.setAttribute('href', `mailto:jahinbinamin@gmail.com?subject=${subject}&body=${body}`);
+    link.removeAttribute('target');
+  } else {
+    // Opens Gmail web compose on desktop browsers
+    link.setAttribute(
+      'href',
+      `https://mail.google.com/mail/?view=cm&fs=1&to=jahinbinamin@gmail.com&su=${subject}&body=${body}`
     );
-
-    // Detect mobile (basic)
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      // Mobile: open default mail app
-      link.href = `mailto:jahinbinamin@gmail.com?subject=${subject}&body=${body}`;
-      // avoid target so it opens the mail app
-      link.removeAttribute('target');
-    } else {
-      // Desktop: open Gmail web compose in new tab (fallback for desktop users)
-      link.href = `https://mail.google.com/mail/?view=cm&fs=1&to=jahinbinamin@gmail.com&su=${subject}&body=${body}`;
-      link.target = "_blank";
-      link.rel = "noopener";
-    }
-  })();
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener');
+  }
+})();
 </script>
 
 
