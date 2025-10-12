@@ -71,29 +71,27 @@
             <!--button-->
 
            <div class="hero-buttons">
-    <a href="https://www.behance.net/jahinlasker1" target="_blank">
-        <button class="social-button">Behance</button>
-    </a>
-    <a href="https://github.com/jahin-design-dev" target="_blank">
-        <button class="social-button">GitHub</button>
-    </a>
-    <a href="https://wa.me/8801748157221" target="_blank">
-        <button class="social-button">WhatsApp</button>
-    </a>
-    <a href="https://www.facebook.com/md.jnss" target="_blank">
-        <button class="social-button">Facebook</button>
-    </a>
-    <a href="https://www.instagram.com/_jahin_vaiyya_/" target="_blank">
-        <button class="social-button">Instagram</button>
-    </a>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jahinbinamin@gmail.com&su=Design%20Project%20Inquiry&body=Hi%20Jahin,%0A%0AI%20found%20you%20through%20your%20website%20and%20would%20like%20to%20discuss%20a%20design%20project.%0A%0ARegards,%0A[Your%20Name]
-" target="_blank" >
-        <button class="social-button">Gmail</button>
-    </a>
-<a href="https://www.linkedin.com/in/jahinbinamin/" target="_blank">
-        <button class="social-button">Linkedin</button>
-    </a>
-
+  <a href="https://www.behance.net/jahinlasker1" target="_blank">
+      <button class="social-button">Behance</button>
+  </a>
+  <a href="https://github.com/jahin-design-dev" target="_blank">
+      <button class="social-button">GitHub</button>
+  </a>
+  <a href="https://wa.me/8801748157221" target="_blank">
+      <button class="social-button">WhatsApp</button>
+  </a>
+  <a href="https://www.facebook.com/md.jnss" target="_blank">
+      <button class="social-button">Facebook</button>
+  </a>
+  <a href="https://www.instagram.com/_jahin_vaiyya_/" target="_blank">
+      <button class="social-button">Instagram</button>
+  </a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jahinbinamin@gmail.com" id="gmail-btn" target="_blank">
+      <button class="social-button">Gmail</button>
+  </a>
+  <a href="https://www.linkedin.com/in/jahinbinamin/" id="linkedin-btn" target="_blank">
+      <button class="social-button">LinkedIn</button>
+  </a>
 </div>
 
 
@@ -591,6 +589,52 @@ document.querySelectorAll('.behance-slider').forEach(slider => {
   }
 })();
 </script>
+
+<script>
+(function() {
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  // === Smart Gmail Button ===
+  const gmail = document.getElementById('gmail-btn');
+  if (gmail) {
+    const subject = encodeURIComponent("Design Project Inquiry");
+    const body = encodeURIComponent(
+      "Hi Jahin,\n\nI found you through your website and would like to discuss a design project.\n\nRegards,\n[Your Name]"
+    );
+
+    if (isMobile) {
+      // Mobile → open mail/Gmail app
+      gmail.href = `mailto:jahinbinamin@gmail.com?subject=${subject}&body=${body}`;
+      gmail.removeAttribute('target');
+    } else {
+      // Desktop → open Gmail web compose
+      gmail.href = `https://mail.google.com/mail/?view=cm&fs=1&to=jahinbinamin@gmail.com&su=${subject}&body=${body}`;
+      gmail.target = "_blank";
+      gmail.rel = "noopener";
+    }
+  }
+
+  // === Smart LinkedIn Button ===
+  const linkedin = document.getElementById('linkedin-btn');
+  if (linkedin) {
+    if (isMobile) {
+      // Try LinkedIn app (if installed)
+      linkedin.href = "linkedin://in/jahinbinamin";
+      linkedin.onclick = function(e) {
+        e.preventDefault();
+        // Fallback to LinkedIn mobile site if app not installed
+        window.location.href = "https://www.linkedin.com/in/jahinbinamin/";
+      };
+    } else {
+      // Desktop → open LinkedIn web
+      linkedin.href = "https://www.linkedin.com/in/jahinbinamin/";
+      linkedin.target = "_blank";
+      linkedin.rel = "noopener";
+    }
+  }
+})();
+</script>
+
 
 
 </body>
