@@ -86,8 +86,16 @@
   <a href="https://www.instagram.com/_jahin_vaiyya_/" target="_blank">
       <button class="social-button">Instagram</button>
   </a>
-  <a href="#" id="gmail-btn" class="social-link"><button class="social-button">Gmail</button></a>
-  <a href="#" id="linkedin-btn" class="social-link"><button class="social-button">LinkedIn</button></a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jahinbinamin@gmail.com&su=Design%20Project%20Inquiry&body=Hi%20Jahin,%0A%0AI%20found%20you%20through%20your%20website%20and%20would%20like%20to%20discuss%20a%20design%20project.%0A%0ARegards,%0A[Your%20Name]" 
+     target="_blank" 
+     id="gmail-btn">
+    <button class="social-button">Gmail</button>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/jahinbinamin/" target="_blank" id="linkedin-btn">
+    <button class="social-button">LinkedIn</button>
+  </a>
 </div>
 
 
@@ -592,38 +600,19 @@ document.addEventListener('DOMContentLoaded', function() {
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
   const gmail = document.getElementById('gmail-btn');
-  if (gmail) {
-    const subject = encodeURIComponent("Design Project Inquiry");
-    const body = encodeURIComponent("Hi Jahin,\n\nI found you through your website and would like to discuss a design project.\n\nRegards,\n[Your Name]");
-
-    if (isMobile) {
-      gmail.href = `mailto:jahinbinamin@gmail.com?subject=${subject}&body=${body}`;
-      gmail.removeAttribute('target');
-    } else {
-      gmail.href = `https://mail.google.com/mail/?view=cm&fs=1&to=jahinbinamin@gmail.com&su=${subject}&body=${body}`;
-      gmail.target = "_blank";
-      gmail.rel = "noopener";
-    }
+  if (gmail && isMobile) {
+    gmail.href = "mailto:jahinbinamin@gmail.com?subject=Design%20Project%20Inquiry&body=Hi%20Jahin,%0A%0AI%20found%20you%20through%20your%20website%20and%20would%20like%20to%20discuss%20a%20design%20project.%0A%0ARegards,%0A[Your%20Name]";
+    gmail.removeAttribute('target');
   }
 
   const linkedin = document.getElementById('linkedin-btn');
-  if (linkedin) {
-    if (isMobile) {
-      linkedin.href = "linkedin://in/jahinbinamin";
-      // fallback handled on click
-      linkedin.addEventListener('click', function(e){
-        e.preventDefault();
-        window.location.href = "https://www.linkedin.com/in/jahinbinamin/";
-      });
-    } else {
-      linkedin.href = "https://www.linkedin.com/in/jahinbinamin/";
-      linkedin.target = "_blank";
-      linkedin.rel = "noopener";
-    }
+  if (linkedin && isMobile) {
+    // For Android app opening
+    linkedin.href = "intent://www.linkedin.com/in/jahinbinamin/#Intent;package=com.linkedin.android;scheme=https;end";
+    linkedin.removeAttribute('target');
   }
 });
 </script>
-
 
 </body>
 </html>
