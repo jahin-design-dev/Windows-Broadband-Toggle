@@ -40,20 +40,6 @@
   <a href="#" id="smart-contact-link">✉ jahinbinamin@gmail.com</a>
 </div>
 
-<script>
-  const link = document.getElementById('smart-contact-link');
-
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-  if(isMobile){
-    // Mobile users → WhatsApp
-    link.href = "https://wa.me/8801748157221?text=Hi%20Jahin,%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20discuss%20a%20design%20project.";
-  } else {
-    // Desktop users → Gmail web
-    link.href = "https://mail.google.com/mail/?view=cm&fs=1&to=jahinbinamin@gmail.com&su=Design%20Project%20Inquiry&body=Hi%20Jahin,%0A%0AI%20found%20you%20through%20your%20website%20and%20would%20like%20to%20discuss%20a%20design%20project.%0A%0ARegards,%0A[Your%20Name]";
-    link.target = "_blank";
-  }
-</script>
 
 
             </div>
@@ -573,11 +559,23 @@ document.querySelectorAll('.behance-slider').forEach(slider => {
 });
 
 </script>
+<script>
+  const link = document.getElementById('smart-contact-link');
+
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  if(isMobile){
+    // Mobile users → WhatsApp
+    link.href = "https://wa.me/8801748157221?text=Hi%20Jahin,%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20discuss%20a%20design%20project.";
+  } else {
+    // Desktop users → Gmail web
+    link.href = "https://mail.google.com/mail/?view=cm&fs=1&to=jahinbinamin@gmail.com&su=Design%20Project%20Inquiry&body=Hi%20Jahin,%0A%0AI%20found%20you%20through%20your%20website%20and%20would%20like%20to%20discuss%20a%20design%20project.%0A%0ARegards,%0A[Your%20Name]";
+    link.target = "_blank";
+  }
+</script>
+
 
 
 </body>
 </html>
 
-</body>
-
-</html>
